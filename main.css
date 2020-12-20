@@ -1,0 +1,47 @@
+.waiter-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.waiter {
+  background-color: white;
+  border-radius: 25px;
+  width: 10em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  /* 25% {
+    transform: translateX(60px);
+  } */
+  50% {
+    transform: translateX(120px);
+  }
+  /* 75% {
+    transform: translateX(60px);
+  } */
+  100% {
+    transform: translateX(0px);
+  }
+}
+.ball {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: red;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
