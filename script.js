@@ -1,10 +1,26 @@
 const d = document,
-  $show = d.querySelector(".show");
+  $show = d.querySelector(".show"),
+  $loader=d.querySelector(".waiter-container"),
+  data=[];
 
+  // setTimeout(()=>{
+  //   $loader.parentElement.removeChild($loader);
+  // },2000)
 
+// const myData=promiseMaker("http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2")
+// console.log(myData)
 
-
-//  
+d.addEventListener("DOMContentLoaded",e=>{
+  getValues().then(ele=>{
+    console.log(ele)
+    $loader.parentElement.removeChild($loader);
+  })
+})
+async function getValues(){
+  const myData=await promiseMaker("http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2");
+  return myData;
+}
+  
 function promiseMaker(url) {
   return new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
@@ -25,25 +41,3 @@ function promiseMaker(url) {
     req.send()
   })
 }
-
-// const myData=promiseMaker("http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2")
-// console.log(myData)
-
-
-// async function getValues(){
-//   const myData=await promiseMaker("http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2");
-//   myData.then(ele=>console.log(ele))
-// }
-
-// const req= new XMLHttpRequest();
-//     req.responseType="json";
-//     req.open("get","http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2");
-
-//     req.onload=function(){
-//       if (this.status===200) console.log(this.response);
-//       else console.error("the response wasn't correct")
-//     }
-//     req.onerror=()=>{
-//       console.error(new Error("somenthing went wrong when reciving response"))
-//     }
-//     req.send()
