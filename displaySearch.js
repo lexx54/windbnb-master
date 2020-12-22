@@ -14,23 +14,21 @@ export function display(inputType,container,values){
     }
   });
 
-  create(countries[0],container.children[2]);
-  console.log(countries)
   container.classList.add("move")
   
   if (inputType.type==="button") {
-    const temp=d.querySelector(".search-values-show");
+    createList(countries[0],container.children[2]);
     
   } else if(inputType.type==="text") {
-
+    createCounter();
   }
-  console.log(inputType);
 }
 export function hide(container){
-  container.classList.remove("move")
+  container.classList.remove("move");
+  container.children[2].innerHTML='';
 }
 
-function create(values,container){
+function createList(values,container){
   for (let prop in values){
     for (let i=0; i<values[prop].length;i++){
       const para=d.createElement("p");
@@ -38,4 +36,8 @@ function create(values,container){
       container.appendChild(para);
     }
   }
+}
+
+function createCounter(){
+   console.log("count")
 }
