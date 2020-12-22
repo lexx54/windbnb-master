@@ -1,9 +1,21 @@
 const d=document;
 
 export function display(inputType,container,values){
-  const cities=[];
+  const countries=[];
 
-  console.log(cities)
+  values.forEach(ele => {
+    if (countries.length===0)countries.push({[ele.country] : [ele.city]});
+    else{
+        if (countries.some(el => el.hasOwnProperty(ele.country))) {
+          countries.forEach(e=>{
+            if(!e[ele.country].includes(ele.city)) e[ele.country].push(ele.city);
+          });
+        } else countries.push({[ele.country] : [ele.city]})
+    }
+  });
+
+  create(countries[0],container.children[2]);
+  console.log(countries)
   container.classList.add("move")
   
   if (inputType.type==="button") {
@@ -18,8 +30,12 @@ export function hide(container){
   container.classList.remove("move")
 }
 
-function create(times){
-  for (let i=0; i<times;i++){
-    const para=d.createElement("p");
+function create(values,container){
+  for (let prop in values){
+    for (let i=0; i<values[prop].length;i++){
+      const para=d.createElement("p");
+      para.innerHTML=`<i class="fas fa-map-marker-alt"></i> ${values[prop][i]}, ${prop}`;
+      container.appendChild(para);
+    }
   }
 }

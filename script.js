@@ -7,13 +7,6 @@ const d = document,
   $display=d.querySelector(".display-search");
   let data;
 
-  // setTimeout(()=>{
-  //   $loader.parentElement.removeChild($loader);
-  // },2000)
-
-// const myData=promiseMaker("http://www.json-generator.com/api/json/get/coXCVpXYrS?indent=2")
-// console.log(myData)
-
 d.addEventListener("DOMContentLoaded",e=>{
   getValues().then(ele=>{
     data=ele;
