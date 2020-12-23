@@ -60,7 +60,6 @@
   left: 0;
   right: 0;
   z-index: 999;
-  /* height: 80vh;  */
   background-color: white;
   display: flex;
   flex-wrap: wrap;
