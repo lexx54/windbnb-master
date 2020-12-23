@@ -23,7 +23,6 @@ d.addEventListener("click",e=>{
   if (e.target.matches(".exit")) hide($display);
   if(e.target.matches(".city-location")) {
     action($display,$inputs,e.target);
-    hide($display);
   }
 })
 
