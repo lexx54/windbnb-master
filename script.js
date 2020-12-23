@@ -1,5 +1,5 @@
 import {getValues} from "./getData.js";
-import {display,hide} from "./displaySearch.js"
+import {display,hide} from "./searchDisplay.js"
 import { action } from "./searchFunction.js";
 
 const d = document,
@@ -24,5 +24,6 @@ d.addEventListener("click",e=>{
   if(e.target.matches(".city-location")) {
     action($display,$inputs,e.target);
   }
+  if(e.target.matches(`.src-btn`)) hide($display);
 })
 
