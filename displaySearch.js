@@ -32,6 +32,7 @@ function createList(values,container){
   for (let prop in values){
     for (let i=0; i<values[prop].length;i++){
       const para=d.createElement("p");
+      para.classList.add("city-location");
       para.innerHTML=`<i class="fas fa-map-marker-alt"></i> ${values[prop][i]}, ${prop}`;
       container.appendChild(para);
     }

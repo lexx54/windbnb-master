@@ -1,10 +1,12 @@
 import {getValues} from "./getData.js";
 import {display,hide} from "./displaySearch.js"
+import { action } from "./searchFunction.js";
 
 const d = document,
   $show = d.querySelector(".show"),
   $loader=d.querySelector(".waiter-container"),
-  $display=d.querySelector(".display-search");
+  $display=d.querySelector(".display-search"),
+  $inputs=d.querySelector(".inputs");
   let data;
 
 d.addEventListener("DOMContentLoaded",e=>{
@@ -18,6 +20,10 @@ d.addEventListener("click",e=>{
   if (e.target.matches(".inputs-in")) {
     display(e.target,$display,data)
   }
-  if (e.target.matches(".exit")) hide($display)
+  if (e.target.matches(".exit")) hide($display);
+  if(e.target.matches(".city-location")) {
+    action($display,$inputs,e.target);
+    hide($display);
+  }
 })
 
