@@ -95,7 +95,7 @@
 }
 .search-sections:nth-child(3) {
   flex-direction: column;
-  padding: 2em;
+  /* padding: 2em; */
   /* height: 80%; */
 }
 .city-location {
@@ -117,6 +117,15 @@
 }
 .src-btn p {
   margin-left: 0.5em;
+}
+.count {
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
+}
+.counter-btn {
+  font-size: 1.5em;
+  padding: 1em;
 }
 
 /*--------------------------------------Header-----------------------------*/
@@ -150,6 +159,7 @@ header {
 }
 .inputs-in {
   width: 45%;
+  cursor: pointer;
 }
 .inputs-in:first-child {
   /*border: 1px solid red;*/

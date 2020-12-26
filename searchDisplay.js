@@ -16,13 +16,10 @@ export function display(inputType,container,values){
 
   container.classList.add("move")
   
-  if (inputType.type==="button") {
-    createList(countries[0],container.children[2]);
-    
-  } else if(inputType.type==="text") {
-    createCounter();
-  }
+  if (inputType.type==="button") createList(countries[0],container.children[2]);
+  else if(inputType.type==="text") createCounter(container.children[2]);
 }
+
 export function hide(container){
   container.classList.remove("move");
   container.children[2].innerHTML='';
@@ -39,6 +36,9 @@ function createList(values,container){
   }
 }
 
-function createCounter(){
-   console.log("count")
+function createCounter(container){
+  container.innerHTML="";
+  const $template=d.querySelector(".counter");
+  const $content=$template.content.cloneNode(true);
+  container.appendChild($content);
 }

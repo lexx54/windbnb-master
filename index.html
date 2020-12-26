@@ -40,11 +40,15 @@
       <div class="search-sections">
         <div>
           <p>location</p>
-          <p>Helsinki, Finland</p>
+          <p class="inputs-in">Helsinki, Finland</p>
         </div>
         <div>
           <p>Guests</p>
-          <input type="text" placeholder="Add Guests" />
+          <input
+            type="text"
+            placeholder="Add Guests"
+            class="display-search-guest inputs-in"
+          />
         </div>
       </div>
       <div class="search-sections search-values-show"></div>
@@ -89,20 +93,20 @@
     </template>
 
     <template class="counter">
-      <div class="count-adult">
+      <div class="count">
         <p>Adults</p>
         <p>Ages 13 or above</p>
-        <div>
-          <i class="far fa-minus-square"></i> O
-          <i class="far fa-plus-square"></i>
+        <div class="counter-btn">
+          <i class="far fa-minus-square minus"></i> O
+          <i class="far fa-plus-square sum"></i>
         </div>
       </div>
-      <div class="count-children">
+      <div class="count">
         <p>Children</p>
         <p>Ages 2-12</p>
-        <div>
-          <i class="far fa-minus-square"></i> O
-          <i class="far fa-plus-square"></i>
+        <div class="counter-btn">
+          <i class="far fa-minus-square minus"></i> O
+          <i class="far fa-plus-square sum"></i>
         </div>
       </div>
     </template>
