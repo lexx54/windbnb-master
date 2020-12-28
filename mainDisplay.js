@@ -3,7 +3,7 @@ export function displayInfo(container,template,info,input){
     $in1=input.children[0].value.split(","),
     $in2=input.children[1].value;
     const data=info.filter(ele=>{
-      if ( ele.city===$in1[0]){
+      if ( ele.city===$in1[0] && ele.maxGuests>$in2){
         return ele;
       }
     })
