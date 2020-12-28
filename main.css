@@ -191,3 +191,15 @@ header {
   cursor: pointer;
   color: var(--color-let1);
 }
+/*--------------------------------------Main-----------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+}
+/*--------------------------------------Cards-----------------------------*/
+
+.card-info {
+}
+.card-info img {
+  width: 100%;
+}

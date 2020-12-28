@@ -1,0 +1,39 @@
+export function displayInfo(container,template,info,input){
+  const 
+    $in1=input.children[0].value.split(","),
+    $in2=input.children[1].value;
+    const data=info.filter(ele=>{
+      if ( ele.city===$in1[0]){
+        return ele;
+      }
+    })
+    container.innerHTML="";
+    for(let card of data){
+      const t=template.content.cloneNode(true);
+      t.children[0].children[0].src=`${card.photo}`;
+      t.children[0].children[1].children[0].innerHTML=`<p>${card.type}</p>`;
+      t.children[0].children[1].children[1].innerHTML=`<p><i class="fas fa-star"></i> ${card.rating}</p>`;
+      t.children[0].children[2].children[0].innerHTML=`<p>${card.title}</p>`;
+
+      console.log(card)
+
+      container.appendChild(t);
+    }
+
+
+
+  // if($in1==='Helsinki, Finland' && $in2){
+  //   console.log(`hello ${$in2} person, from ${$in1} `)
+  // } else if($in1==='Turku, Finland' && $in2){
+  //   console.log(`hello ${$in2} person, from ${$in1} `)
+  // } else if($in1==='Vaasa, Finland' && $in2){
+  //   console.log(`hello ${$in2} person, from ${$in1} `)
+  // } else if($in1==='Oulu, Finland' && $in2){
+  //   console.log(`hello ${$in2} person, from ${$in1} `)
+  // }
+  
+}
+
+function createCard(){
+
+}
