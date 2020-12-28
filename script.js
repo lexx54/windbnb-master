@@ -18,7 +18,8 @@ d.addEventListener("DOMContentLoaded",e=>{
 })
 
 d.addEventListener("click",e=>{
-  if (e.target.matches(".inputs-in")) display(e.target,$display,data)
+  if (e.target.matches(".inputs-in")) display(e.target,$display,data);
+  if (e.target.matches(".inputs-in-dis")) display(e.target,$display,data);
   if (e.target.matches(".exit")) hide($display);
   if(e.target.matches(".city-location")) action($display,$inputs,e.target);
   if(e.target.matches(`.src-btn`)) hide($display);

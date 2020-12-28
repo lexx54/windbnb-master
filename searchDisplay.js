@@ -26,6 +26,7 @@ export function hide(container){
 }
 
 function createList(values,container){
+  container.innerHTML="";
   for (let prop in values){
     for (let i=0; i<values[prop].length;i++){
       const para=d.createElement("p");
