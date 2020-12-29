@@ -11,11 +11,11 @@ export function displayInfo(container,template,info,input){
     for(let card of data){
       const t=template.content.cloneNode(true);
       t.children[0].children[0].src=`${card.photo}`;
-      t.children[0].children[1].children[0].innerHTML=`<p>${card.type}</p>`;
-      t.children[0].children[1].children[1].innerHTML=`<p><i class="fas fa-star"></i> ${card.rating}</p>`;
+      t.children[0].children[1].children[1].innerHTML=`<p>${card.type}</p>`;
+      t.children[0].children[1].children[2].innerHTML=`<p><i class="fas fa-star"></i> ${card.rating}</p>`;
       t.children[0].children[2].children[0].innerHTML=`<p>${card.title}</p>`;
 
-      console.log(card)
+      if (card.superHost) t.children[0].children[1].children[0].innerHTML=`<p>SUPER HOST</p>`;
 
       container.appendChild(t);
     }
