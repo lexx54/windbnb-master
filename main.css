@@ -197,6 +197,21 @@ main {
   display: flex;
   flex-direction: column;
 }
+.principal-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em 1em;
+}
+.principal-text p:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.principal-text p:last-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #4f4f4f;
+}
 /*--------------------------------------Cards-----------------------------*/
 
 .card-info {
@@ -208,10 +223,15 @@ main {
 }
 .card-info-desc {
   padding-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 .host {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  flex: 0 1 auto;
 }
 .host p {
   border: 1px solid #4f4f4f;
@@ -222,10 +242,12 @@ main {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #828282;
+  flex: 1;
 }
 .stars {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  flex: 1;
 }
 .stars p i {
   color: var(--color-let1);

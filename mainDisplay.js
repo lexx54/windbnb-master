@@ -7,7 +7,11 @@ export function displayInfo(container,template,info,input){
         return ele;
       }
     })
-    container.innerHTML="";
+    container.innerHTML= `<section class="principal-text">
+        <p>Stays in Finland</p>
+        <p>12+ stays</p>
+      </section>`;
+
     for(let card of data){
       const t=template.content.cloneNode(true);
       t.children[0].children[0].src=`${card.photo}`;
