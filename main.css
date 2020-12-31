@@ -91,6 +91,7 @@
 }
 .search-sections:nth-child(2) div {
   padding: 0.5em 1em;
+  text-align: left;
 }
 .search-sections:nth-child(2) div:first-child {
   border-bottom: 1px solid var(--color-bor1);
@@ -134,13 +135,12 @@
 }
 
 /*--------------------------------------Header-----------------------------*/
-/*header*/
 header {
   display: flex;
   flex-wrap: wrap;
 }
 .header-name {
-  width: 50%;
+  flex: 1 0 50%;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   color: var(--color-let1);
@@ -151,7 +151,7 @@ header {
   margin-left: 0.5em;
 }
 .header-search {
-  width: 100%;
+  flex: 1 0 50%;
   padding: 1em;
 }
 /*inputs*/
