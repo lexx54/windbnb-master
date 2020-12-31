@@ -16,12 +16,11 @@ export function display(input,container,values){
       }
     }
 
-    if (input.type==="button") createList(countries[0],container.children[2]);
-    else if(input.type==="text") createCounter(container.children[2]);
+    if (input.type==="button") createList(countries[0],container.children[2]); //show the list of countries availables
+    else if(input.type==="text") createCounter(container.children[2]); //display a counter to sum or abstract the number of guests
   });
-  container.classList.add("move")
-  
-  
+
+  container.classList.add("move");
 }
 
 export function hide(container){

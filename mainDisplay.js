@@ -1,7 +1,7 @@
 export function displayInfo(container,template,info,input){
   const 
-    $in1=input.children[0].value.split(","),
-    $in2=input.children[1].value;
+    $location=input.children[0].value.split(","), //get the countries and cities
+    $guests=input.children[1].value; // get the number of guest
 
     container.innerHTML= `<section class="principal-text">
     <p>Stays in Finland</p>
@@ -10,49 +10,24 @@ export function displayInfo(container,template,info,input){
 
     info.then(ele=>
       ele.filter(el=>{
-        if ( el.city===$in1[0] && el.maxGuests>$in2){
+        if ( el.city===$location[0] && el.maxGuests>$guests){
           return el;
         }
     })).then(ele=> {
       for(let card of ele){
-        const t=template.content.cloneNode(true);
-        t.children[0].children[0].src=`${card.photo}`;
-        t.children[0].children[1].children[1].innerHTML=`<p>${card.type}</p>`;
-        t.children[0].children[1].children[2].innerHTML=`<p><i class="fas fa-star"></i> ${card.rating}</p>`;
-        t.children[0].children[2].children[0].innerHTML=`<p>${card.title}</p>`;
-  
-        if (card.superHost) t.children[0].children[1].children[0].innerHTML=`<p>SUPER HOST</p>`;
-  
-        container.appendChild(t);
+        createCard(card,container,template)
       }
     });
-
-    // for(let card of data){
-    //   const t=template.content.cloneNode(true);
-    //   t.children[0].children[0].src=`${card.photo}`;
-    //   t.children[0].children[1].children[1].innerHTML=`<p>${card.type}</p>`;
-    //   t.children[0].children[1].children[2].innerHTML=`<p><i class="fas fa-star"></i> ${card.rating}</p>`;
-    //   t.children[0].children[2].children[0].innerHTML=`<p>${card.title}</p>`;
-
-    //   if (card.superHost) t.children[0].children[1].children[0].innerHTML=`<p>SUPER HOST</p>`;
-
-    //   container.appendChild(t);
-    // }
-
-
-
-  // if($in1==='Helsinki, Finland' && $in2){
-  //   console.log(`hello ${$in2} person, from ${$in1} `)
-  // } else if($in1==='Turku, Finland' && $in2){
-  //   console.log(`hello ${$in2} person, from ${$in1} `)
-  // } else if($in1==='Vaasa, Finland' && $in2){
-  //   console.log(`hello ${$in2} person, from ${$in1} `)
-  // } else if($in1==='Oulu, Finland' && $in2){
-  //   console.log(`hello ${$in2} person, from ${$in1} `)
-  // }
-  
 }
 
-function createCard(){
+function createCard(data,cont,temp){
+  const t=temp.content.cloneNode(true);
+  t.children[0].children[0].src=`${data.photo}`;
+  t.children[0].children[1].children[1].innerHTML=`<p>${data.type}</p>`;
+  t.children[0].children[1].children[2].innerHTML=`<p><i class="fas fa-star"></i> ${data.rating}</p>`;
+  t.children[0].children[2].children[0].innerHTML=`<p>${data.title}</p>`;
 
+  if (data.superHost) t.children[0].children[1].children[0].innerHTML=`<p>SUPER HOST</p>`;
+
+  cont.appendChild(t);
 }

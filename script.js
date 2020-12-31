@@ -12,13 +12,13 @@ const d = document,
   $main=d.querySelector("main"),
   $cardTemplate=d.querySelector(".card"),
   data=getValues().then(ele=>{
-    //data=ele;
-    $loader.parentElement.removeChild($loader);
-    return ele;
+    $loader.parentElement.removeChild($loader); //remove the loader 
+    return ele; //return the json object to be use in the entire page, as a promise
   });
 
 d.addEventListener("DOMContentLoaded", e=>{
-  displayInfo($main,$cardTemplate,data,$inputs);
+  //once the DOM is ready, display the default info
+  displayInfo($main,$cardTemplate,data,$inputs); 
 })
 
 d.addEventListener("click",e=>{
