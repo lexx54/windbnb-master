@@ -10,18 +10,14 @@ const d = document,
   $inputs=d.querySelector(".inputs"),
   $displayGuest=d.querySelector(".display-search-guest"),
   $main=d.querySelector("main"),
-  $cardTemplate=d.querySelector(".card");
-
-  let data;
-
-d.addEventListener("DOMContentLoaded",e=>{
-  getValues().then(ele=>{
-    data=ele;
+  $cardTemplate=d.querySelector(".card"),
+  data=getValues().then(ele=>{
+    //data=ele;
     $loader.parentElement.removeChild($loader);
-  })
+    return ele;
+  });
 
-})
-d.addEventListener("load",e=>{
+d.addEventListener("DOMContentLoaded", e=>{
   displayInfo($main,$cardTemplate,data,$inputs);
 })
 
