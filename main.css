@@ -271,7 +271,28 @@ main {
 /*--------------------------------------Cards-----------------------------*/
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20vh;
+}
+.fot-line {
+  width: 80%;
+  height: 3px;
+  margin-bottom: 2em;
+  background-color: var(--color-bor1);
+}
+.url-dir {
+  text-decoration: none;
+  color: var(--color-let1);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.social-net {
+  padding-top: 1em;
+}
+.social-net a {
+  padding: 0em 1em;
+  font-size: 3em;
+  color: var(--color-let1);
 }
