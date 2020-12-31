@@ -1,7 +1,5 @@
 @media screen and (min-width: 720px) {
   /*--------------------------------Display desktops/laptops-----------------------------*/
-  .display-search {
-  }
   .search-sections {
     flex: 1 0 40%;
   }
@@ -53,7 +51,6 @@
 
   main {
     flex-flow: row wrap;
-    /* justify-content: space-around; */
   }
   .principal-text {
     flex: 1 0 90%;
