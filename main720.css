@@ -49,4 +49,21 @@
   .header-search {
     flex: 1 0 40%;
   }
+  /*--------------------------------------MAIN-----------------------------*/
+
+  main {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .principal-text {
+    flex: 1 0 100%;
+  }
+  .card-info {
+    padding: 0 1em;
+    flex: 0 0 45%;
+    height: fit-content;
+  }
+  .card-info img {
+    height: 50%;
+  }
 }
