@@ -4,6 +4,7 @@
 :root {
   --color-bor1: #f2f2f2;
   --color-let1: #eb5757;
+  --color-let2: #4f4f4f;
 }
 /*--------------------------------------Loader-----------------------------*/
 .waiter-container {
@@ -106,6 +107,11 @@
 .city-location {
   padding: 1em 0;
   cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  color: var(--color-let2);
+}
+.city-location i {
+  padding-right: 1em;
 }
 .search-sections:nth-child(4) {
   margin-top: 4em;
@@ -127,10 +133,15 @@
   padding: 1em;
   font-size: 1.2em;
   text-align: center;
+  font-family: "Mulish", sans-serif;
+}
+.count p:nth-child(2),
+.count div {
+  color: #828282;
 }
 .counter-btn {
   font-size: 1.5em;
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 /*--------------------------------------Header-----------------------------*/
