@@ -53,17 +53,17 @@
 
   main {
     flex-flow: row wrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
   }
   .principal-text {
-    flex: 1 0 100%;
+    flex: 1 0 90%;
   }
   .card-info {
     padding: 0 1em;
     flex: 0 0 45%;
-    height: fit-content;
+    height: 50vh;
   }
   .card-info img {
-    height: 50%;
+    height: 70%;
   }
 }

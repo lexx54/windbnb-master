@@ -256,3 +256,11 @@ main {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
+
+/*--------------------------------------Cards-----------------------------*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}

@@ -1,0 +1,5 @@
+@media screen and (min-width: 1020px) {
+  .card-info {
+    flex: 0 0 30%;
+  }
+}
