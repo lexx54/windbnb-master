@@ -2,6 +2,7 @@ import {getValues} from "./getData.js";
 import { displayInfo } from "./mainDisplay.js";
 import {display,hide} from "./searchDisplay.js"
 import { action, minus, sum } from "./searchFunction.js";
+import {btnAppear,btnDisappear} from './btnDisplay.js'
 
 const d = document,
   $show = d.querySelector(".show"),
@@ -29,10 +30,17 @@ d.addEventListener("click",e=>{
   if(e.target.matches(`.minus`)) minus($inputs.children[1],$displayGuest);
   if(e.target.matches(`.sum`)) sum($inputs.children[1],$displayGuest);
   if(e.target.matches(`.inputs-ic`)) displayInfo($main,$cardTemplate,data,$inputs);
-  if(e.target.matches(`.src-btn`)) {
+  if(e.target.matches(`.src-btn`)||e.target.matches(`.src-btn *`)) {
     displayInfo($main,$cardTemplate,data,$inputs);
     hide($display)
   };
+  if(e.target.matches(`.btnScroll`)||e.target.matches(`.btnScroll *`)) window.scroll(0,0);
+})
+
+d.addEventListener("scroll",e=>{
+  if (window.pageYOffset>300) btnAppear($main);
+  else if(window.pageYOffset<300)btnDisappear($main);
 
 })
+
 

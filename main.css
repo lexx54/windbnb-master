@@ -54,6 +54,24 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
+.btnScroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  background-color: var(--color-let1);
+  color: white;
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+  cursor: pointer;
+}
+.btnScroll i {
+  font-size: 3.5em;
+}
 /*-----------------------------------Display Mobile-----------------------------*/
 
 .display-search {
@@ -292,7 +310,7 @@ footer {
   padding-top: 1em;
 }
 .social-net a {
-  padding: 0em 1em;
+  padding: 0em 0.5em;
   font-size: 3em;
   color: var(--color-let1);
 }
