@@ -3,10 +3,7 @@ export function displayInfo(container,template,info,input){
     $location=input.children[0].value.split(","), //get the countries and cities
     $guests=input.children[1].value; // get the number of guest
 
-    container.innerHTML= `<section class="principal-text">
-    <p>Stays in Finland</p>
-    <p>12+ stays</p>
-  </section>`;
+
 
     info.then(ele=>
       ele.filter(el=>{
@@ -14,6 +11,10 @@ export function displayInfo(container,template,info,input){
           return el;
         }
     })).then(ele=> {
+      container.innerHTML= `<section class="principal-text">
+      <p>Stays in Finland</p>
+      <p>${ele.length}+ stays</p>
+    </section>`;
       for(let card of ele){
         createCard(card,container,template)
       }
